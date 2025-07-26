@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI评估系统 - 用户协议</title>
+    <link rel="stylesheet" href="terms-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="background-animation">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+        
+        <div class="terms-card">
+            <div class="card-header">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>AI评估系统</h1>
+                </div>
+                <h2>用户协议</h2>
+                <p class="subtitle">智能评估，精准分析</p>
+            </div>
+            
+            <div class="terms-content">
+                <div class="section">
+                    <h3><i class="fas fa-shield-alt"></i> 服务说明</h3>
+                    <p>欢迎使用AI评估系统！本协议旨在规范用户与平台之间的权利与义务。请您仔细阅读并同意以下条款后再进行注册和使用。</p>
+                    <p>AI评估系统为用户提供智能评估、数据分析、个性化推荐等科技服务，致力于通过先进的人工智能技术为用户提供精准、高效的评估体验。</p>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-user-check"></i> 用户行为规范</h3>
+                    <ul>
+                        <li>用户应遵守国家法律法规，不得利用本系统从事违法、侵权、破坏系统安全等行为</li>
+                        <li>用户不得恶意注册、刷量、传播虚假信息或进行其他损害平台利益的行为</li>
+                        <li>用户应妥善保管账号信息，不得将账号转让、出租或借给他人使用</li>
+                        <li>用户在使用过程中应尊重其他用户，不得发布恶意、攻击性内容</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-lock"></i> 数据与隐私保护</h3>
+                    <p>我们高度重视用户隐私保护，承诺：</p>
+                    <ul>
+                        <li>用户数据将采用多重加密技术存储，确保数据安全</li>
+                        <li>平台承诺不泄露用户隐私，不向第三方出售用户信息</li>
+                        <li>用户有权随时查询、更正或删除自己的个人信息</li>
+                        <li>我们采用行业领先的安全措施，定期进行安全审计</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 免责声明</h3>
+                    <p>平台对因以下原因造成的损失不承担责任：</p>
+                    <ul>
+                        <li>不可抗力因素导致的系统故障或数据丢失</li>
+                        <li>用户自身操作不当或设备问题</li>
+                        <li>第三方服务提供商的技术问题</li>
+                        <li>网络环境异常或安全攻击</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-edit"></i> 协议变更</h3>
+                    <p>平台有权根据业务发展需要随时调整本协议内容。协议变更时，我们将通过以下方式通知用户：</p>
+                    <ul>
+                        <li>在平台显著位置发布公告</li>
+                        <li>通过用户注册的邮箱或手机号发送通知</li>
+                        <li>在用户登录时弹出提示</li>
+                    </ul>
+                    <p>用户继续使用服务即表示同意接受修改后的协议条款。</p>
+                </div>
+
+                <div class="footer-note">
+                    <p><i class="fas fa-info-circle"></i> 感谢您的信任与支持！AI评估系统致力于为您提供安全、可靠的智能服务体验。</p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button class="back-btn" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i>
+                    返回注册页面
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            // 检查是否来自注册页面
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromRegister = urlParams.get('from') === 'register';
+            
+            if (fromRegister || (document.referrer && document.referrer.includes('index.html'))) {
+                // 跳转到注册页面并激活注册标签页
+                window.location.href = 'index.html?tab=register';
+            } else {
+                // 直接访问的，跳转到注册页面
+                window.location.href = 'index.html?tab=register';
+            }
+        }
+    </script>
+</body>
+</html> 

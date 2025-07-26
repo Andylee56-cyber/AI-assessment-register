@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI评估系统 - 用户注册/登录</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="background-animation">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+        
+        <div class="auth-card">
+            <div class="card-header">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>AI评估系统</h1>
+                </div>
+                <p class="subtitle">智能评估，精准分析</p>
+            </div>
+            
+            <!-- 登录/注册切换 -->
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" data-tab="login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    登录
+                </button>
+                <button class="auth-tab-btn" data-tab="register">
+                    <i class="fas fa-user-plus"></i>
+                    注册
+                </button>
+            </div>
+            
+            <!-- 登录表单 -->
+            <form id="loginForm" class="auth-form active">
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="loginUsername" placeholder="请输入手机号或邮箱" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="请输入密码" required>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="submit" class="auth-btn">
+                        <span>立即登录</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <!-- 注册表单 -->
+            <form id="registerForm" class="auth-form">
+                <div class="register-tabs">
+                    <button type="button" class="tab-btn active" data-tab="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        手机号注册
+                    </button>
+                    <button type="button" class="tab-btn" data-tab="wechat">
+                        <i class="fab fa-weixin"></i>
+                        微信注册
+                    </button>
+                    <button type="button" class="tab-btn" data-tab="email">
+                        <i class="fas fa-envelope"></i>
+                        邮箱注册
+                    </button>
+                </div>
+                
+                <!-- 手机号注册 -->
+                <div class="tab-content active" id="phone-tab">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="tel" id="phone" placeholder="请输入手机号" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-shield-alt"></i>
+                            <input type="text" id="phone-code" placeholder="请输入验证码" required>
+                            <button type="button" class="send-code-btn" id="sendPhoneCode">发送验证码</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="phone-password" placeholder="请设置密码" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 微信注册 -->
+                <div class="tab-content" id="wechat-tab">
+                    <div class="wechat-qr">
+                        <div class="qr-code">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <p>请使用微信扫描二维码注册</p>
+                        <button type="button" class="wechat-btn">
+                            <i class="fab fa-weixin"></i>
+                            微信登录
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 邮箱注册 -->
+                <div class="tab-content" id="email-tab">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="请输入邮箱地址" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-shield-alt"></i>
+                            <input type="text" id="email-code" placeholder="请输入验证码" required>
+                            <button type="button" class="send-code-btn" id="sendEmailCode">发送验证码</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="email-password" placeholder="请设置密码" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" id="agree" required>
+                        <span class="checkmark"></span>
+                        我已阅读并同意 <a href="terms.html?from=register" target="_blank">用户协议</a> 和 <a href="privacy.html?from=register" target="_blank">隐私政策</a>
+                    </label>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span>立即注册</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
